@@ -83,9 +83,9 @@ galleryContainer.addEventListener('click', (event) => {
   if (event.target.nodeName === 'IMG') {
     const largeImageURL = event.target.dataset.source;
 
-    lightboxInstance = basicLightbox.create(`
-      <img src="${largeImageURL}" width="800" height="600">
-    `, {
+      lightboxInstance = basicLightbox.create(
+          `<img src="${largeImageURL}" width="800" height="600"> `,
+          {
       onShow: () => {
         document.addEventListener('keydown', handleKeyPress);
       },
